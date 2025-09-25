@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "netlify/functions/server.js",
+      "src": "api/server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "netlify/functions/server.js"
+      "dest": "api/server.js"
     },
     {
       "src": "/(.*)",
