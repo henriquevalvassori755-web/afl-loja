@@ -8,11 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/api/produtos",
-      "dest": "netlify/functions/server.js"
-    },
-    {
-      "src": "/api/cadastrar-produto",
+      "src": "/api/(.*)",
       "dest": "netlify/functions/server.js"
     },
     {
