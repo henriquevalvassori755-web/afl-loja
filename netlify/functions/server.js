@@ -5,8 +5,6 @@ const { createClient } = require('@supabase/supabase-js');
 const path = require('path');
 const multer = require('multer');
 
-// Removida a linha: const serverless = require('serverless-http');
-
 // Inicializa o aplicativo Express
 const app = express();
 
@@ -15,7 +13,7 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 // Configura o middleware para servir arquivos estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json()); // Middleware para processar JSON
+app.use(express.json());
 
 // Recupera as variáveis de ambiente para conexão com o Supabase
 const SUPABASE_URL = process.env.SUPABASE_URL;
@@ -24,10 +22,10 @@ const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
 // Inicializa o cliente Supabase
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-// Rota para listar todos os produtos, filtrar por categoria, loja e buscar por termo
+// Rota para listar todos os produtos
 app.get('/api/produtos', async (req, res) => {
-    // ... (restante do código desta rota, que já está correto)
-    const { categoria, termo, loja, fuzzy = 'false', page = 1, limit = 1000, orderBy = 'nome_asc' } = req.query;
+    // ... (código existente da rota, que está correto)
+    const { categoria, termo, loja, fuzzy = 'false', page = 1, limit = 1000, orderBy = 'nome_asc' } = req.query; 
     const cleanCategoria = categoria ? categoria.toString().trim() : null;
     const cleanLoja = loja ? loja.toString().trim() : null;
     const cleanTermo = termo ? termo.toString().trim() : null;
@@ -77,10 +75,9 @@ app.get('/api/produtos', async (req, res) => {
     res.status(200).json(data || []);
 });
 
-
 // Rota para cadastrar um novo produto com upload de imagem
 app.post('/api/cadastrar-produto', upload.single('imagem'), async (req, res) => {
-    // ... (restante do código desta rota, que já está correto)
+    // ... (código existente da rota, que está correto)
     const { nome, categoria, descricao, preco, loja, link } = req.body;
     const imagemFile = req.file;
     if (!imagemFile) {
@@ -125,6 +122,5 @@ app.post('/api/cadastrar-produto', upload.single('imagem'), async (req, res) => 
     }
 });
 
-
-// Exporta o aplicativo para ser usado pelo Vercel
+// Exporta a aplicação para ser usada pelo Vercel
 module.exports = app;
