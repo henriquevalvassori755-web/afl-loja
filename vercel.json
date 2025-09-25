@@ -2,18 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "netlify/functions/server.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "app.js"
+      "src": "/api/produtos",
+      "dest": "netlify/functions/server.js"
+    },
+    {
+      "src": "/api/cadastrar-produto",
+      "dest": "netlify/functions/server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "index.html"
+      "dest": "public/$1"
     }
   ]
 }

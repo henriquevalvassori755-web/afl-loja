@@ -1,0 +1,94 @@
+ /* Estilo para o container do vídeo */
+        .video-container {
+            position: relative;
+            width: 100%; /* O container ocupa a largura total do elemento pai */
+            overflow: hidden; /* Garante que o iframe não vaze do container */
+            margin-bottom: 20px; /* Adicionado para espaçamento entre os vídeos */
+        }
+        /* Proporção padrão para vídeos normais (16:9) */
+        .aspect-ratio-16x9 {
+            padding-bottom: 56.25%; /* (altura / largura) * 100 = (9 / 16) * 100 */
+        }
+        /* Estilo para o iframe */
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ajustes de cor e tamanho para títulos */
+        h1, h3 {
+            color: #00ff6a;
+            margin-bottom: 30px;
+            font-size: 100%;
+            
+            font-weight: bolder;
+        }
+        .s {
+            border: dotted greenyellow 5px;
+        }
+        .p {
+            color: #00ff6a;
+            font-size: 100%;
+            font-family: fantasy;
+            font-style: oblique;
+        }
+        h2 {
+            min-height: 50px; /* Para manter o espaço mesmo sem frase */
+            color: #2bff00;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-size: 100%;
+        }
+        .loading {
+            margin-top: 15px;
+            color: #2bff00;
+            font-style: italic;
+        }
+        .error {
+            color: #dc3545;
+            margin-top: 15px;
+        }
+        /* Estilo para a galeria de vídeos longos (ajustado para centralizar) */
+        .video-gallery { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center; /* Centraliza os itens dentro de cada célula da grid */
+            max-width: 1200px; /* Limita a largura máxima da galeria */
+            margin: 0 auto; /* Centraliza a galeria na página */
+        }
+        .colorh2 {
+            color: #00ff6a;
+            word-break: break-all;
+            font-size: 200%;
+        }
+
+        /* ESTILO PARA AJUSTAR OS ÍCONES NO MENU DE NAVEGAÇÃO */
+        .header__menu ul li a img {
+            vertical-align: middle; /* Alinha o ícone com o texto */
+            margin-right: 5px; /* Espaço entre o ícone e o texto */
+            height: 25px; /* Ajuste o tamanho conforme necessário */
+            width: auto;
+        }
+
+        /* Estilo para ajustar a logo no header para tamanhos menores */
+        .header__logo img {
+            max-height: 50px; /* Altura máxima para a logo em telas menores */
+            width: auto;
+        }
+
+        /* Oculta os textos dos links em telas menores, mantendo apenas os ícones */
+        @media (max-width: 991px) { /* Ponto de quebra padrão do Bootstrap para col-lg */
+            .header__menu ul li a {
+                display: flex; /* Para alinhar o ícone e o texto */
+                align-items: center; /* Centraliza verticalmente */
+                justify-content: center; /* Centraliza horizontalmente se não houver texto */
+            }
+            .header__menu ul li a span { /* Span para envolver o texto do link */
+                display: none; /* Oculta o texto */
+            }
+        }

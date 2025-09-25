@@ -1,0 +1,61 @@
+  .video-container {
+            position: relative;
+            width: 100%; /* O container ocupa a largura total do elemento pai */
+            overflow: hidden; /* Garante que o iframe não vaze do container */
+            margin-bottom: 20px; /* Adicionado para espaçamento entre os vídeos */
+        }
+        
+        /* Estilo para o iframe */
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Proporção padrão para vídeos normais (16:9) */
+        .aspect-ratio-16x9 {
+            padding-bottom: 56.25%; /* (altura / largura) * 100 = (9 / 16) * 100 */
+        }
+        
+        /* Removido o estilo para 9x16, pois não teremos Shorts */
+
+        h1,h3 {
+            color: #00ff6a;
+            margin-bottom: 30px;
+        }
+        .p {
+            color: #00ff6a;
+            font-size: xx-large;
+            
+        }
+        h2 {
+            min-height: 50px; /* Para manter o espaço mesmo sem frase */
+            color: #ffffff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .loading {
+            margin-top: 15px;
+            color: #ffffff;
+            font-style: italic;
+        }
+        .error {
+            color: #dc3545;
+            margin-top: 15px;
+        }
+        /* Estilo para a galeria de vídeos longos (ajustado para centralizar) */
+        .video-gallery { /* Renomeado de video-gallery2 para video-gallery */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center; /* Centraliza os itens dentro de cada célula da grid */
+            max-width: 1200px; /* Limita a largura máxima da galeria */
+            margin: 0 auto; /* Centraliza a galeria na página */
+        }
+        .colorh2 {
+            color: #00ff6a;
+            word-break: break-all;
+        }

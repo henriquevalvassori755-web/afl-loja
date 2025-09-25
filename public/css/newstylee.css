@@ -1,0 +1,251 @@
+/* Geral - Aplicado a todas as páginas */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o rodapé fique no final */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Header */
+header {
+    background-color: #222222;
+    padding: 15px 20px;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header .qw { /* Logo da imagem */
+    border-radius: 50%; /* Faz a imagem ser redonda */
+    border: 2px solid #007bff; /* Borda ao redor do logo */
+    height: 60px; /* Tamanho do logo */
+    width: 60px; /* Tamanho do logo */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-right: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+/* Main Content Wrapper */
+main {
+    flex: 1; /* Faz o conteúdo principal preencher o espaço restante */
+    padding: 20px;
+    max-width: 960px; /* Largura máxima para o conteúdo */
+    margin: 20px auto; /* Centraliza o conteúdo */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Seções de Conteúdo (converter-section, tips-section, news-section) */
+.converter-section,
+.tips-section,
+.news-section {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.converter-section h2,
+.tips-section h1.colorh2,
+.news-section h2#news-title {
+    color: #0011ff;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para Inputs, Selects e Buttons */
+input[type="file"],
+input[type="number"],
+textarea,
+select {
+    display: block;
+    width: calc(100% - 22px); /* Ajuste para padding/border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Inclui padding e border no width */
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 150px; /* Largura mínima para botões */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: translateY(0);
+}
+
+/* Mensagens de Carregamento e Erro */
+#loading-message,
+#trainingTipsContent.p, /* Para a página de Dicas */
+#news-content p { /* Para a página de Notícias */
+    margin-top: 15px;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+}
+
+#error-message,
+#trainingTipsErrorMessage.error {
+    margin-top: 15px;
+    color: #dc3545; /* Red for errors */
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Escondido por padrão, JavaScript mostra */
+}
+
+/* Imagens de Saída e Visualizadores */
+#pdfViewer,
+#outputImage,
+#extractedImage {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: block; /* Garante que a imagem ocupe sua própria linha */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Links de Download */
+#downloadPdfImageLink,
+#downloadLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #28a745; /* Green for download */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#downloadPdfImageLink:hover,
+#downloadLink:hover {
+    background-color: #218838;
+}
+
+/* Estilo específico para a seção de Dicas */
+.tips-section {
+    text-align: center;
+}
+.tips-section .p { /* Conteúdo das dicas */
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: left; /* Alinha o texto das dicas à esquerda */
+    margin: 0 auto;
+    max-width: 700px; /* Limita a largura para melhor legibilidade */
+}
+
+/* Estilo para a seção de Notícias */
+#news-section {
+    text-align: left;
+}
+#news-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+#news-content {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+#news-date {
+    font-size: 0.9em;
+    color: #666;
+    text-align: right;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: rgb(66, 2, 139);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Empurra o rodapé para baixo */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header .qw {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    main {
+        padding: 15px;
+        margin: 15px;
+    }
+    .converter-section,
+    .tips-section,
+    .news-section {
+        padding: 15px;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    input[type="file"],
+    input[type="number"],
+    textarea,
+    select {
+        width: calc(100% - 20px);
+    }
+}

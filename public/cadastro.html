@@ -1,57 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Novo Produto</title>
-    <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastrar Novo Produto</title>
+ <link rel="stylesheet" href="style2.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/aos.css" type="text/css">
+    <link rel="stylesheet" href="css/ionicons.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="stylesheet" href="css/icomoon.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/cssdoindex.css">
+
+
 </head>
 <body>
-   <section class="cadastro-form">
-    <h2>Cadastrar Novo Produto</h2>
-    <form id="cadastro-produto-form">
-      <label for="nome">Nome do Produto:</label>
-      <input type="text" id="nome" required>
-      
-      <label for="categoria">Categoria:</label>
-      <select id="categoria" required>
-        <option value="">Selecione a Categoria</option>
-        <option value="casa">Casa</option>
-        <option value="beleza">Beleza</option>
-        <option value="eletronicos">Eletrônicos</option>
-        <option value="eletrodomesticos">Eletrodomésticos</option>
-        <option value="celular">Celular</option>
-        <option value="computadores">Computadores</option>
-      </select>
-      
-      <label for="descricao">Descrição:</label>
-      <textarea id="descricao" required></textarea>
-      
-      <label for="preco">Preço:</label>
-      <input type="number" id="preco" step="0.01" required>
-      
-      <label for="loja">Loja:</label>
-      <select id="loja" required>
-        <option value="">Selecione a Loja</option>
-        <option value="shopee">Shopee</option>
-        <option value="aliexpress">AliExpress</option>
-        <option value="mercado livre">Mercado Livre</option>
-      </select>
-      
-      <label for="imagem">Imagem do Produto:</label>
-<input type="file" id="imagem" accept="image/jpeg" required>
-      
-      <label for="link">Link do Produto:</label>
-      <input type="url" id="link" required>
-      
-      <button type="submit">Cadastrar</button>
-    </form>
-    <p id="message"></p>
-  </section>
+<center><section id="w" class="cadastro-form">
+ <h2>Cadastrar Novo Produto</h2>
+<form id="cadastro-produto-form">
+ <label for="nome">Nome do Produto:</label>
+<input type="text" id="nome" name="nome" required>
+ 
+ <label for="categoria">Categoria:</label>
+ <select id="categoria" name="categoria" required>
+<option value="">Selecione a Categoria</option>
+ <option value="casa">Casa</option>
+<option value="beleza">Beleza</option>
+ <option value="eletronicos">Eletrônicos</option>
+ <option value="eletrodomesticos">Eletrodomésticos</option>
+<option value="celular">Celular</option>
+<option value="computadores">Computadores</option>
+ </select>
+ 
+<label for="descricao">Descrição:</label>
+ <textarea id="descricao" name="descricao" required></textarea>
 
+ <label for="preco">Preço:</label>
+<input type="number" id="preco" name="preco" step="0.01" required>
 
-<script src="cliente.js"></script>
+ <label for="loja">Loja:</label>
+ <select id="loja" name="loja" required>
+<option value="">Selecione a Loja</option>
+ <option value="shopee">Shopee</option>
+ <option value="aliexpress">AliExpress</option>
+<option value="mercado livre">Mercado Livre</option>
+ </select>
 
+ <label for="imagem">Imagem do Produto:</label>
+      <input type="file" id="imagem" name="imagem" accept="image/jpeg" required>
 
+ <label for="link">Link do Produto:</label>
+ <input type="url" id="link" name="link" required>
+
+ <button type="submit">Cadastrar</button>
+<p id="message"></p>
+</section></center><br>
+  <footer class="footer" id="w">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img class="qw" src="img/channels4_profile.jpg" height="100" width="100" alt="Logo MotivacionalAI no rodapé"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li><a target="_blank" href="https://www.tiktok.com/@motivacionalai2"><img class="qw" src="img/tiktok.png" alt="Ícone do TikTok da MotivacionalAI"></a></li>
+                            <li><a target="_blank" href="https://k.kwai.com/u/@motivacionalAI/7CXdhQp3"><img class="qw" src="img/kwai.png" alt="Ícone do Kwai da MotivacionalAI"></a></li>
+                            <li><a target="_blank" href="https://www.youtube.com/channel/@motivaçãoAI-e8j"><img class="qw" src="img/youtube.png" alt="Ícone do YouTube da MotivacionalAI"></a></li>
+                            <li><a href="./index.html"><img class="qw" src="img/Logo_SiteProtegido_CompraSegura_SSL.webp" height="40" width="40" alt="Selo Site Protegido SSL e Compra Segura"></a></li>
+                            <li><a href="./index.html"><img class="qw" src="img/images.png" height="40" width="40"  alt="Ícone relacionado ao site"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                   <div class="col-lg-3">
+                    <p>Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://www.linkedin.com/in/henrique-valvassori-940822192" target="_blank">Henrique Valvassori</a>
+                        </p>
+                </div>
+                </div>
+        </div>
+    </footer>
+  <script src="cliente.js"></script>
 </body>
 </html>
